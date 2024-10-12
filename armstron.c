@@ -1,14 +1,19 @@
-#include<stdio.h>
-#include<math.h>
-int main(){
-    int i,num,alpha=0;
-    int result;
-    for(i=1;i<=3;i++){
-        printf("enter value in num\n");
-        scanf("%d",&num);
-        result=num*num*num;// when use result=pow(num,3); give error with 5 as cube of 5 is 125 but get 124 why?
-        alpha+=result;
-        printf("num is %d, result is %d, alpha is %d\n",num,result,alpha);
-    } printf("overall sum is %d \n",alpha);
-    return 0;
-}
+ #include<stdio.h>
+ #include<math.h>
+ int main(){
+    double a,b,c,alpha,n1,n2,n3,sum;
+    printf("enter value of a,b,c\n");
+    scanf("%lf%lf%lf",&a,&b,&c);
+    n1=pow(a,3);
+    n2=pow(b,3);
+    n3=pow(c,3);
+    sum=(a*100)+(b*10)+c;
+    alpha=n1+n2+n3;
+    printf("alpha is %lf and sum is %lf \n",alpha,sum);
+    if(alpha == sum){
+        printf("this is armstron number\n");}
+        else {
+            printf("not a armstron number\n");
+        }
+ return 0;   }
+ 
